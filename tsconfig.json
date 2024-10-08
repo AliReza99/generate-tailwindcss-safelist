@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "strict": true, // Optional: Enable strict type-checking
+    "target": "ES2020",
+    "module": "ES2020",
+    "declaration": true, // Generates type declaration files (.d.ts)
+    "outDir": "./dist", // Output directory for compiled files
+    "moduleResolution": "node",
+    "esModuleInterop": true, // Ensures ES module compatibility
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "esm": true
+  }
+}
