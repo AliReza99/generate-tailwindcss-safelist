@@ -2,7 +2,7 @@
   "name": "generate-tailwindcss-safelist",
   "private": false,
   "version": "1.0.1",
-  "description": "",
+  "description": "Generate a Tailwind CSS safelist by scanning project files",
   "author": "Alireza Bahrani",
   "license": "MIT",
   "type": "module",
@@ -11,6 +11,7 @@
     "dist"
   ],
   "bin": "dist/cli.js",
+  "repository": "https://github.com/AliReza99/generate-tailwindcss-safelist.git",
   "scripts": {
     "lint:prettier": "prettier --check --cache ./src/**/*.{js,jsx,ts,tsx}",
     "prettify": "prettier --write --cache ./src/**/*.{js,jsx,ts,tsx}",
