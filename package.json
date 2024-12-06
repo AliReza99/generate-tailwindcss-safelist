@@ -10,8 +10,14 @@
   "files": [
     "dist"
   ],
-  "bin": "dist/cli.js",
-  "repository": "https://github.com/AliReza99/generate-tailwindcss-safelist.git",
+  "bin": {
+    "generate-tailwindcss-safelist": "dist/cli.js"
+  },
+  "keywords": ["tailwindcss", "safelist", "generate", "cli"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AliReza99/generate-tailwindcss-safelist.git"
+  },
   "scripts": {
     "lint:prettier": "prettier --check --cache ./src/**/*.{js,jsx,ts,tsx}",
     "prettify": "prettier --write --cache ./src/**/*.{js,jsx,ts,tsx}",
@@ -19,10 +25,7 @@
     "prebuild": "rimraf dist",
     "build": "tsc",
     "do-link": "npm link",
-    "release:patch": "npm version patch",
-    "release:major": "npm version major",
-    "release:private": "npm publish --access=restricted",
-    "release:public": "npm publish --access=public"
+    "release": "npx release patch"
   },
   "dependencies": {
     "@arbz/execute": "^1.0.3",
