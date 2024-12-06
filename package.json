@@ -1,7 +1,7 @@
 {
   "name": "generate-tailwindcss-safelist",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate a Tailwind CSS safelist by scanning project files",
   "author": "Alireza Bahrani",
   "license": "MIT",
@@ -13,7 +13,12 @@
   "bin": {
     "generate-tailwindcss-safelist": "dist/cli.js"
   },
-  "keywords": ["tailwindcss", "safelist", "generate", "cli"],
+  "keywords": [
+    "tailwindcss",
+    "safelist",
+    "generate",
+    "cli"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AliReza99/generate-tailwindcss-safelist.git"
