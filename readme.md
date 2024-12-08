@@ -28,30 +28,41 @@ npx generate-tailwindcss-safelist -i <path-to-input-css> -o <path-to-output-json
 npx generate-tailwindcss-safelist -i ./src/styles.css -o safelist.json
 ```
 
-Given an input CSS file, `src/styles.css`:
+### For package creators
+
+```js
+// src/index.js
+export function Title({ children }) {
+  return <h2 className="text-lg font-bold text-gray-800">{children}</h2>;
+}
+```
 
 ```css
+/* src/styles.css */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
 
-This will generate `safelist.json`:
-
-```json
-["sr-only", "fixed", "absolute", "relative", "flex", "max-h-[300px]"]
+```sh
+# generate safelist.json
+npx generate-tailwindcss-safelist -i ./src/styles.css -o ./safelist.json
 ```
 
-### Example for End Users
-
-For users of your package, here’s how they can import the generated safelist in their Tailwind configuration:
-
 ```javascript
+// safelist.json
+["text-lg", "font-bold", "text-gray-800"]
+```
+
+### For package consumers
+
+```js
 // tailwind.config.js
-import twSafelist from '<package-name>/safelist.json';
+import safelist from "<package-name>/safelist.json";
 
 const config = {
-  safelist: twSafelist,
-  // ...rest of the Tailwind config
+  safelist: safelist,
+  // ... other configs
 };
 
 export default config;
